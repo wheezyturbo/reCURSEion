@@ -15,7 +15,8 @@ function fibo(n) {
 }
 
 function fiboRecursive(n) {
-  if (n === 1) return [0, 1]; 
+  if(n<=0) return [];
+  if (n === 1) return [0]; 
   if (n === 2) return [0, 1];
   const prev = fiboRecursive(n - 1);
   const next = prev[prev.length - 1] + prev[prev.length - 2];
@@ -23,4 +24,4 @@ function fiboRecursive(n) {
 }
 
 console.log(fibo(8)); 
-console.log(fiboRecursive(8)); 
+console.log(fiboRecursive(8));
